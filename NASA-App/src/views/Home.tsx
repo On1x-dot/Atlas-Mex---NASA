@@ -1,5 +1,8 @@
 // src/components/Home.tsx
 import React from "react";
+import Menu from "../components/Menu"; 
+import BottomMenu from "../components/BottomMenu"; // Importar el componente BottomMenu
+import ViewMenu from "../components/ViewMenu"; // Importar el nuevo componente ViewMenu
 
 const Home: React.FC = () => {
   // Generar estrellas aleatorias
@@ -7,8 +10,6 @@ const Home: React.FC = () => {
     const left = Math.random() * 100; // Posición horizontal aleatoria
     const top = Math.random() * 100; // Posición vertical aleatoria
     const size = Math.random() * 2 + 1; // Tamaño aleatorio entre 1 y 3
-
-    // Crear una duración de parpadeo aleatoria para cada estrella
     const duration = Math.random() * 2 + 1; // Duración aleatoria entre 1 y 3 segundos
 
     return (
@@ -29,10 +30,9 @@ const Home: React.FC = () => {
   return (
     <div className="relative flex flex-col items-center justify-center h-screen">
       <div className="stars">{stars}</div>
-      <h1 className="text-5xl font-bold mb-4 text-white">Bienvenido al Hackathon</h1>
-      <p className="text-xl text-center text-white">
-        Aquí podrás encontrar información sobre los proyectos y actividades del hackathon. ¡Únete y diviértete!
-      </p>
+      <Menu /> {/* Menú superior */}
+      <ViewMenu /> {/* Menú cuadrado con botones */}
+      <BottomMenu /> {/* Menú inferior */}
     </div>
   );
 };
