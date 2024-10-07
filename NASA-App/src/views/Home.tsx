@@ -1,8 +1,8 @@
 // src/components/Home.tsx
 import React from "react";
-import Menu from "../components/Menu"; 
-import BottomMenu from "../components/BottomMenu"; // Importar el componente BottomMenu
-import ViewMenu from "../components/ViewMenu"; // Importar el nuevo componente ViewMenu
+import Menu from "../components/Menus/Menu"; 
+import BottomMenu from "../components/Menus/BottomMenu"; // Importar el componente BottomMenu
+import ViewMenu from "../components/Menus/ViewMenu"; // Importar el nuevo componente ViewMenu
 
 const Home: React.FC = () => {
   // Generar estrellas aleatorias

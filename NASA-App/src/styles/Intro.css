@@ -1,0 +1,30 @@
+/* src/views/Intro.css */
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background: url('../path/to/your/stars-background.jpg') no-repeat center center; /* Asegúrate de usar la ruta correcta */
+    background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+  }
+  
+  .start-button {
+    margin-top: 20px; /* Espacio arriba del botón */
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 20px; /* Tamaño de fuente */
+    color: #fff; /* Color del texto */
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
+  }
+  
+  .start-button:hover {
+    background-color: #45a049; /* Cambia el color al pasar el mouse */
+  }
+  

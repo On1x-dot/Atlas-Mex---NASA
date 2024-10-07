@@ -1,0 +1,41 @@
+/* SsystemSubMenu styles */
+.sub-menu {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro y más opaco */
+    border: 1px solid #FF9800; /* Bordes anaranjados */
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px; /* Espaciado hacia abajo desde el menú padre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+    transition: all 0.3s ease; /* Suaviza la aparición del submenú */
+    opacity: 0; /* Comienza invisible */
+    visibility: hidden; /* Oculta el submenú */
+    z-index: 1; /* Asegura que esté debajo del menú principal */
+  }
+  
+  /* Muestra el submenú cuando se activa */
+  .sub-menu.active {
+    opacity: 1; /* Hazlo visible */
+    visibility: visible; /* Cambia la visibilidad a visible */
+  }
+  
+  /* Estilos para los enlaces del submenú */
+  .sub-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sub-menu li {
+    padding: 5px 0;
+  }
+  
+  .sub-menu a {
+    text-decoration: none;
+    color: #FFFFFF; /* Color del texto */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+  }
+  
+  .sub-menu a:hover {
+    color: #FF9800; /* Cambia el color en hover */
+  }
+  

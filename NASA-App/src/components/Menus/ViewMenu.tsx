@@ -1,7 +1,8 @@
 import React from 'react';
-import planetIcon from '../assets/planet4.svg'; // Ajusta la ruta según sea necesario
-import systemIcon from '../assets/system2.svg';
-import starIcon from '../assets/star2.svg';
+import '../../styles/Menus/ViewMenu.css';
+import planetIcon from '../../assets/planet4.svg'; // Ajusta la ruta según sea necesario
+import systemIcon from '../../assets/system2.svg';
+import starIcon from '../../assets/star2.svg';
 
 const ViewMenu: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const ViewMenu: React.FC = () => {
         <li>
           <a href="#planet">
             <img src={planetIcon} alt="Planet Icon" className="icon" />
-            Planet
+            Exoplanet
           </a>
         </li>
         <li>

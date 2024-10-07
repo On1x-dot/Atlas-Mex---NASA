@@ -30,192 +30,38 @@ body {
   }
 }
 
-/* Estilos del menú superior */
-.menu {
+/* Estilos para el planeta */
+.planet {
+  position: absolute; /* Posicionar de forma absoluta */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Ajustar posición para centrar */
+  width: 100px; /* Ancho del planeta */
+  height: 100px; /* Alto del planeta */
+  border-radius: 50%; /* Bordes redondeados para forma circular */
+  background: radial-gradient(circle, #ffcc00 40%, #4CAF50 100%); /* Degradado del planeta */
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.8); /* Sombra suave */
+}
+
+/* Estilos del sistema de coordenadas */
+.coordinates {
   position: absolute;
-  top: 20px; /* Espaciado desde la parte superior */
-  right: 20px; /* Espaciado desde la derecha */
-  z-index: 10; /* Asegúrate de que el menú esté sobre las estrellas */
-}
-
-.menu ul {
-  display: flex;
-  list-style-type: none; /* Quitar los puntos de la lista */
-  padding: 0;
-  margin: 0;
-  border: 2px solid #4CAF50; /* Borde verde militar */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 10px 20px; /* Espaciado interno */
-  box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5); /* Sombra verde */
-}
-
-.menu li {
-  margin: 0 20px; /* Espaciado horizontal entre elementos */
-}
-
-.menu a {
-  text-decoration: none; /* Quitar subrayado */
-  color: #4CAF50; /* Color del texto verde militar */
-  font-weight: bold; /* Hacer el texto más grueso */
-  font-size: 18px; /* Tamaño de fuente */
-  position: relative; /* Para efectos de pseudo-elemento */
-  transition: color 0.3s, transform 0.3s; /* Transición suave */
-}
-
-.menu a:hover {
-  color: #ffcc00; /* Color amarillo brillante al pasar el mouse */
-  transform: scale(1.1); /* Efecto de escalado */
-}
-
-.menu a::after {
-  content: ''; /* Pseudo-elemento */
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #4CAF50; /* Color de la línea */
-  position: absolute;
-  bottom: -5px; /* Espaciado desde abajo */
-  left: 0;
-  transform: scaleX(0); /* Oculto por defecto */
-  transition: transform 0.3s; /* Transición suave */
-}
-
-.menu a:hover::after {
-  transform: scaleX(1); /* Mostrar línea al pasar el mouse */
-}
-
-/* Estilos para el menú View */
-.view-menu {
-  position: absolute;
-  bottom: 80px; /* Espaciado desde la parte inferior */
-  right: 20px; /* Espaciado desde la derecha */
-  z-index: 10; /* Asegúrate de que el menú esté sobre las estrellas */
-  border: 2px solid #4CAF50; /* Borde verde militar */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 10px 20px; /* Espaciado interno */
-  box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5); /* Sombra verde */
-  /* Añadir un poco de padding extra en la parte superior para el título */
-  padding-top: 30px;
-  background: rgba(0, 0, 0, 0.8); /* Fondo ligeramente transparente */
-}
-
-.view-title {
-  position: absolute; /* Posicionar el título sobre el borde */
-  top: -15px; /* Ajustar la posición vertical del título */
-  left: 50%; /* Centrar el título horizontalmente */
-  transform: translateX(-50%); /* Alinear el título al centro */
-  background-color: black; /* Fondo negro para que el borde no se vea detrás */
-  padding: 0 10px; /* Espaciado alrededor del título */
+  top: 20px;
+  left: 20px;
+  z-index: 10; /* Asegúrate de que las coordenadas estén sobre las estrellas */
   color: #4CAF50; /* Color del texto */
   font-weight: bold; /* Hacer el texto más grueso */
-  z-index: 11; /* Asegúrate de que el título esté encima del borde */
-}
-
-.view-menu ul {
-  list-style-type: none; /* Quitar los puntos de la lista */
-  padding: 0; /* Quitar espaciado interno */
-  margin: 0; /* Quitar márgenes */
-  display: flex; /* Mostrar elementos en fila */
-  justify-content: space-around; /* Espaciado horizontal entre elementos */
-}
-
-.view-menu li {
-  margin: 0 10px; /* Espaciado horizontal entre elementos */
-}
-
-.view-menu a {
-  display: flex; /* Usar flexbox para alinear icono y texto */
-  align-items: center; /* Centrar verticalmente */
-  text-decoration: none; /* Quitar subrayado */
-  color: #4CAF50; /* Color del texto verde militar */
-  font-weight: bold; /* Hacer el texto más grueso */
-  transition: all 0.3s; /* Transición suave */
-  padding: 10px; /* Espaciado interno para el botón */
-  border-radius: 5px; /* Bordes redondeados en el botón */
-  background: rgba(255, 255, 255, 0.1); /* Fondo del botón */
-  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3); /* Sombra del botón */
-}
-
-.view-menu a:hover {
-  color: #ffcc00; /* Color amarillo brillante al pasar el mouse */
-  transform: scale(1.05); /* Efecto de escalado */
-  background: rgba(255, 255, 255, 0.2); /* Fondo del botón al pasar el mouse */
-}
-
-.icon {
-  margin-right: 8px; /* Espaciado entre el icono y el texto */
-  fill: #4CAF50; /* Color del icono */
-  width: 20px; /* Ancho del icono */
-  height: 20px; /* Altura del icono */
-}
-
-.view-menu a::after {
-  content: ''; /* Pseudo-elemento */
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #4CAF50; /* Color de la línea */
-  position: absolute;
-  bottom: -5px; /* Espaciado desde abajo */
-  left: 0;
-  transform: scaleX(0); /* Oculto por defecto */
-  transition: transform 0.3s; /* Transición suave */
-}
-
-.view-menu a:hover::after {
-  transform: scaleX(1); /* Mostrar línea al pasar el mouse */
-}
-
-/* Estilos para el menú inferior */
-.bottom-menu {
-  position: absolute;
-  bottom: 20px; /* Espaciado desde la parte inferior */
-  left: 20px; /* Espaciado desde la izquierda */
-  z-index: 10; /* Asegúrate de que el menú esté sobre las estrellas */
-}
-
-.bottom-menu ul {
-  display: flex;
-  list-style-type: none; /* Quitar los puntos de la lista */
-  padding: 0;
-  margin: 0;
-  border: 2px solid #4CAF50; /* Borde verde militar */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 10px 20px; /* Espaciado interno */
-  box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5); /* Sombra verde */
-}
-
-.bottom-menu li {
-  margin: 0 20px; /* Espaciado horizontal entre elementos */
-}
-
-.bottom-menu a {
-  text-decoration: none; /* Quitar subrayado */
-  color: #4CAF50; /* Color del texto verde militar */
-  font-weight: bold; /* Hacer el texto más grueso */
   font-size: 18px; /* Tamaño de fuente */
-  position: relative; /* Para efectos de pseudo-elemento */
-  transition: color 0.3s, transform 0.3s; /* Transición suave */
 }
 
-.bottom-menu a:hover {
-  color: #ffcc00; /* Color amarillo brillante al pasar el mouse */
-  transform: scale(1.1); /* Efecto de escalado */
+/* Clase para la transición de desvanecimiento */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Agrega la animación de desvanecimiento */
 }
 
-.bottom-menu a::after {
-  content: ''; /* Pseudo-elemento */
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #4CAF50; /* Color de la línea */
-  position: absolute;
-  bottom: -5px; /* Espaciado desde abajo */
-  left: 0;
-  transform: scaleX(0); /* Oculto por defecto */
-  transition: transform 0.3s; /* Transición suave */
-}
-
-.bottom-menu a:hover::after {
-  transform: scaleX(1); /* Mostrar línea al pasar el mouse */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
