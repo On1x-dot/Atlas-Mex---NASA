@@ -1,0 +1,20 @@
+.comet {
+    position: absolute;
+    top: 20%; /* Ajusta la posición vertical */
+    left: 100%; /* Comienza fuera de la pantalla a la derecha */
+    width: 60px; /* Ancho del cometa */
+    height: 10px; /* Alto del cometa */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); /* Color y efecto de desvanecimiento */
+    border-radius: 50%; /* Bordes redondeados */
+    animation: cometAnimation 4s linear forwards; /* Animación para mover el cometa */
+  }
+  
+  @keyframes cometAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-150vw); /* Mueve el cometa fuera de la pantalla */
+    }
+  }
+  
