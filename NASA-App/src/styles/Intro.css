@@ -1,14 +1,41 @@
-/* src/views/Intro.css */
-
 .intro-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh; /* Ocupa toda la altura de la ventana */
-  background-color: black; /* Fondo negro sólido */
+  background-color: #000; /* Fondo negro sólido */
   color: white; /* Color del texto */
   text-align: center; /* Centrar el texto */
+  padding: 20px;
+  position: relative; /* Para poder posicionar elementos absolutos */
+  overflow: hidden; /* Para ocultar desbordes */
+}
+
+.text-scroll-container {
+  max-height: 80vh; /* Limita la altura del contenedor de texto */
+  overflow-y: auto; /* Permite el desplazamiento vertical */
+  width: 100%; /* Ocupará el ancho completo del contenedor */
+}
+
+.text-block {
+  background: rgba(20, 20, 20, 0.8); /* Fondo oscuro y ligeramente transparente */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 10px; /* Espacio entre bloques */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 191, 255, 0.5); /* Sombras para efecto de profundidad */
+  transition: opacity 0.5s ease-in-out; /* Suaviza la transición al cambiar la opacidad */
+  max-width: 600px; /* Ancho máximo del bloque */
+}
+
+.text-block h1, .text-block h2, .text-block h3 {
+  margin: 10px 0; /* Margen entre encabezados */
+  color: #00BFFF; /* Color de texto azul brillante para los encabezados */
+}
+
+.text-block p {
+  line-height: 1.5; /* Mejora la legibilidad */
+  color: #e0e0e0; /* Color de texto gris claro */
 }
 
 .start-button {
@@ -47,4 +74,27 @@
 .start-button:hover {
   color: #ffffff; /* Cambia el color del texto al pasar el mouse */
   box-shadow: 0 0 20px rgba(0, 191, 255, 1); /* Sombra más intensa al pasar el mouse */
+}
+
+/* Animación de entrada */
+.fade-in {
+  opacity: 0; /* Comienza invisible */
+  animation: fadeIn 0.5s forwards; /* Aplica la animación */
+}
+
+.fade-out {
+  opacity: 1; /* Comienza visible */
+  animation: fadeOut 0.5s forwards; /* Aplica la animación */
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1; /* Finaliza visible */
+  }
+}
+
+@keyframes fadeOut {
+  to {
+      opacity: 0; /* Finaliza invisible */
+  }
 }
