@@ -5,7 +5,7 @@ import '../styles/Intro.css'; // Asegúrate de que los estilos estén importados
 const Intro: React.FC<{ onStart: () => void }> = ({ onStart }) => {
   return (
     <div className="intro-container">
-      <h1>Welcome to the Starry Space!</h1>
+      <h1>¡Welcome to this Journey!</h1>
       <button className="start-button" onClick={onStart}>
         Start
       </button>
